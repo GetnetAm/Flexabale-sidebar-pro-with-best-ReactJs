@@ -1,0 +1,231 @@
+@import "./variables";
+
+body {
+  //    overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: $veryLightGreen;
+  font-family: $fontFamily;
+}
+
+h1 {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar {
+  background-color: $white;
+  position: absolute;
+  height: 100vh;
+  width: 15rem;
+  top: 0;
+  left: 0;
+
+  padding: 2rem 3em;
+  transition: width .5s ease-in;
+
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      height: 3.5rem;
+      width: auto;
+      border-radius: 50%;
+    }
+  }
+
+  h2.title {
+    font-size: 23.42px;
+    color: $green;
+    padding: 0 0 0 1rem;
+  }
+
+  // .burgerContainer {
+  //     content: '';
+  //     background-color: $green;
+  //     position: absolute;
+  //     right:(-35px /2);
+  //     top: cal(9rem /1.15);
+  //     width: 35px;
+  //     height: 35px;
+  //     border-radius: 2rem;
+  //     z-index: inherit;
+
+  // }
+
+  .toggle-menu-btn {
+    color: green;
+
+    position: absolute;
+    top: 20%;
+    font-size: 20px;
+    right: -40px;
+    transform: translateY(-50%);
+    transition: width .5s ease-in;
+  }
+
+  .profileContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 0 0;
+
+    img {
+      width: auto;
+      height: 3.5rem;
+      border-radius: 50%;
+    }
+
+    .profileContents {
+      padding: 0 0 0 1rem;
+      p.name {
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+        color: $darkGrey;
+        text-transform: capitalize;
+        font-weight: $heavyFont;
+        opacity: 1;
+        transition: opacity .2s ease-in;
+      }
+      p {
+        padding: 0;
+        margin: 0;
+        font-size: 13.9px;
+        color: $darkGrey;
+        text-transform: lowercase;
+        opacity: 1;
+        transition: opacity .2s ease-in;
+      }
+    }
+  }
+
+  .contentsContainer {
+    margin: 2rem 0 0 0;
+
+    ul {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: column;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-direction: row;
+      margin: 0.75rem 0;
+      width: 100%;
+      border-radius: 1rem;
+
+     
+    }
+    li.active{
+        background-color: $lightGreen;
+        a{
+            color: $green;
+        }
+      
+      }
+
+    li :hover{
+        background-color: $lightGrey;
+        transition: 0.25s all;
+    }
+
+    .icon {
+      padding: 0 1rem 0 0;
+    }
+    a {
+      text-decoration: none;
+      color: $darkGrey;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 0 0 0.5rem;
+      opacity: 1;
+      transition: opacity .2s ease-in;
+    }
+  }
+}
+
+.sidebar.inactive {
+  background-color: $white;
+  transition: width .5s ease-in;
+  width: 8px;
+  margin-left: 5px;
+  transition: width .5s ease-in;
+
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      height: 2.5rem;
+      width: auto;
+      border-radius: 50%;
+      margin-left: 20px;
+    }
+
+    h2.title {
+      font-size: 18px;
+      color: $green;
+      padding: 0 0 0 1rem;
+    }
+  }
+  .profileContainer {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 0 0;
+    margin-left: 5px;
+
+    img {
+      width: auto;
+      height: 2rem;
+      border-radius: 50%;
+      
+    }
+  }
+
+  .profileContents {
+    padding: 0 0 0 1rem;
+    p.name {
+    //   padding: 0;
+    //   margin-left: 5px;
+      font-size: 15px;
+      display: inline;
+      
+      color: $darkGrey;
+      text-transform: capitalize;
+      font-weight: $heavyFont;
+      opacity: 0;
+    }
+    p {
+    //   padding: 0;
+    //   margin: 0;
+      font-size: 13.9px;
+      color: $darkGrey;
+      text-transform: lowercase;
+      opacity: 0;
+    }
+  }
+
+ 
+
+a{
+    opacity: 0;
+}
+
+}
+
