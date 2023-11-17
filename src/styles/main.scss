@@ -1,7 +1,7 @@
 @import "./variables";
 
 body {
-  //    overflow: hidden;
+    //  overflow: hidden;
   height: 100vh;
   width: 100vw;
   background-color: $veryLightGreen;
@@ -15,6 +15,71 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+
+
+// header start
+
+
+  // .header{
+  //   grid-area: header;
+  //   height: 60px;
+  //   display: flex;
+  //   position: sticky !important;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   padding: 0 20 0 20px;
+  //   right: 100px;
+    
+  //   box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+  // }
+
+  .header{
+    height: 60px;
+    box-shadow: 0 6px 7px -3px rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    grid-area: header;
+    justify-content: space-between;
+
+
+    .header-left{
+      margin-left: 400px;
+     
+
+
+    }
+    .header-right{
+      padding: 5px;
+      gap: 10px;
+      margin-right: 100px;
+
+      .icon{
+        padding: 10px;
+      }
+    }
+    
+  }
+
+  .main-cards{
+    background-color: rebeccapurple;
+    width: 400px;
+    height: 400px;
+ 
+  }
+
+  .card-inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card-inner > .card_icon{
+      font-size: 25px;
+    }
+
+  }
+
+
+// header end
 
 .sidebar {
   background-color: $white;
@@ -141,8 +206,9 @@ h1 {
         transition: 0.25s all;
     }
 
-    .icon {
+    i.icon {
       padding: 0 1rem 0 0;
+      color: black;
     }
     a {
       text-decoration: none;
@@ -158,74 +224,119 @@ h1 {
   }
 }
 
-.sidebar.inactive {
-  background-color: $white;
-  transition: width .5s ease-in;
-  width: 8px;
+
+.sidebar.inactive{
+  width: 30px;
   margin-left: 5px;
-  transition: width .5s ease-in;
 
   .logoContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        img {
+          height: 2.5rem;
+          width: auto;
 
-    img {
-      height: 2.5rem;
-      width: auto;
-      border-radius: 50%;
-      margin-left: 20px;
-    }
+          border-radius: 50%;
+          margin-left: 20px;
+        }
+    
+        h2.title {
+          font-size: 13px;
+          color: $green;
+          padding: 0 0 0 5px;
+       
+        }
+      }
 
-    h2.title {
-      font-size: 18px;
-      color: $green;
-      padding: 0 0 0 1rem;
-    }
-  }
-  .profileContainer {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 0 0 0;
+      .profileContainer {
+            display: block;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 0 0 0;
+            margin-left: 5px;
+        
+            img {
+              width: auto;
+              height: 2.5rem;
+              border-radius: 50%;
+              
+            }
+          }
+        
+          .profileContents {
+            padding: 0 0 0 1rem;
+            p.name {
+              font-size: 14px;
+              opacity: 1;
+
+            }
+            p {
+           
+              opacity: 0;
+            }
+          }
+          .list_each{
+            opacity: 0;
+          }
+          .icon{
+            opacity: 1;
+          }
+
+
+}
+
+
+
+
+
+
+//  medium query
+
+
+@media screen and (max-width: 992px){
+
+  .sidebar.inactive{
+    width: 30px;
     margin-left: 5px;
-
-    img {
-      width: auto;
-      height: 2rem;
-      border-radius: 50%;
-      
-    }
   }
 
-  .profileContents {
-    padding: 0 0 0 1rem;
-    p.name {
-    //   padding: 0;
-    //   margin-left: 5px;
-      font-size: 15px;
-      display: inline;
-      
-      color: $darkGrey;
-      text-transform: capitalize;
-      font-weight: $heavyFont;
-      opacity: 0;
+  .header{
+   
+    justify-content: space-between;
+
+
+    .header-left{
+      position: relative;
+      margin-left: 200px;
+
+
     }
-    p {
-    //   padding: 0;
-    //   margin: 0;
-      font-size: 13.9px;
-      color: $darkGrey;
-      text-transform: lowercase;
-      opacity: 0;
+    .header-right{
+      padding: 5px;
+      display: flex;
+
+      .icon{
+        padding: 10px;
+      }
     }
+
   }
 
  
+  }
 
-a{
-    opacity: 0;
-}
 
-}
 
+
+
+
+
+
+
+
+
+
+
+// media query part

@@ -7,11 +7,15 @@ import News from './pages/News';
 import Performance from './pages/Performance';
 import Transaction from './pages/Transaction';
 import Settings from './pages/Settings';
+import Header from './Components/Header';
 
 function App() {
   return (
    <BrowserRouter>
    <div>
+
+    <Header  />
+
     <Sidebar />
     <Routes>
       <Route path='/' element={<Dashboard />} />
